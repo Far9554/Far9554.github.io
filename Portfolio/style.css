@@ -1,0 +1,137 @@
+body
+{
+    background-color: #023535;
+    background-image: repeating-radial-gradient(#015958, #008F8C,#023535  102% );
+    height: 200vh;
+    display: block;
+    font-size: 20pt;
+    color: white;
+    text-shadow: 0 0 3px;
+    border: 0px solid white;
+}
+
+#title {
+    font-size: 40pt;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
+    /* DEBUG VARIABLES */
+    border: 0px solid rgb(255, 255, 255); 
+}
+
+.title{
+    font-size: 40pt;
+}
+
+.desc{
+    font-size: 15pt;
+}
+
+.gif {
+    height: 150pt;
+}
+
+.lk-button {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.kd-button {
+    /* generic button */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    border: 0px solid;
+    box-shadow: inset 0 0 20px rgba(255, 238, 0, 0);
+    outline: 1px solid;
+    outline-color: white;
+    outline-offset: 0px;
+    text-shadow: none;
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+    position: relative;
+    display: inline-block;
+    margin-left: 0.1rem;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.kd-button:hover {
+    border: 0px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2); 
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+    text-decoration: none;
+}
+
+.proj-button
+{
+    border: 2px solid white;
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: transform .3s;
+	max-width:10vh;
+	min-width:10vh;
+    min-height:10vh;
+	max-height:10vh;
+    vertical-align: middle;
+}
+
+.proj-button:hover {
+    
+    /* border: 3px solid white; */
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5); 
+    outline-color: rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px 2px #427388;
+}
+  
+.proj-button-active
+{
+    position: relative;
+    display: inline-block;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .3s;
+    vertical-align: middle;
+    max-width:10vh;
+    min-width:10vh;
+    min-height:10vh;
+    max-height:10vh;
+}
+  
+.proj-button-active:hover
+{
+    box-shadow: inset 0 0 20px rgba(221, 189, 11, 0.5), 0 0 20px rgba(236, 221, 7, 0.5); 
+    outline-color: yellow;
+    text-shadow: 1px 1px 2px yellow;
+}
+
+.proj-button-img 
+{
+	overflow: hidden;
+	transition: transform .5s;
+	max-width: 100%;
+	width: auto;
+    height: auto;
+    vertical-align: middle;
+}
