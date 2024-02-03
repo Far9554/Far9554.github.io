@@ -1,13 +1,31 @@
-body
-{
-    background-color: #023535;
-    background-image: repeating-radial-gradient(#015958, #008F8C,#023535  102% );
-    height: 200vh;
-    display: block;
-    font-size: 20pt;
-    color: white;
-    text-shadow: 0 0 3px;
-    border: 0px solid white;
+:root {
+    --color1: #E0D7DC; /*Fondo Claro*/
+    --color2: #1C69A1; /* Accent Light */
+    --color3: #2F7EBD; /* Main */
+    --color4: #26516D; /* Accent Dark */
+    --color5: #2E3238; /*Fondo Oscuro*/
+
+    --primary: #2f7ebd;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    color: var(--color1);
+}
+
+button.primary { background-color: #2f7ebd; }
+button.info { background-color: #2e3238; }
+button.success { background-color: #43a071; }
+button.warning { background-color: #c19039; }
+button.danger { background-color: #f44336; }
+
+body {
+    width: 100vw;
+    background-color: var(--color5);
+    color: var(--color1);
 }
 
 #title {
