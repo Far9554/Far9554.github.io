@@ -1,0 +1,79 @@
+/* #00880A  Fondo    */ 
+/* #002A03  No Turno */ 
+/* #007708  Turno    */ 
+
+:root {
+    --mantis-50: #f6faf3;
+    --mantis-100: #e9f5e3;
+    --mantis-200: #d3eac8;
+    --mantis-300: #afd89d;
+    --mantis-400: #82bd69;
+    --mantis-500: #61a146;
+    --mantis-600: #4c8435;
+    --mantis-700: #3d692c;
+    --mantis-800: #345427;
+    --mantis-900: #2b4522;
+    --mantis-950: #13250e;
+}
+
+/*---- ==== BUTTONS ==== ----*/
+button {
+    background-color: var(--mantis-500) !important;
+    border-style: none !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+button:hover {
+    background-color: var(--mantis-600) !important;
+}
+
+button:active {
+    background-color: var(--mantis-700) !important;
+}
+
+button:disabled {
+    background-color: var(--mantis-200) !important;
+    color: var(--mantis-700) !important;
+}
+/*---- ==== END BUTTONS ==== ----*/
+/*---- ==== DISEÑO TABLERO ==== ----*/
+body {
+    background-color: var(--mantis-800);
+}
+
+#Mesero {
+    border-radius: 10px;
+    padding: 10px;
+
+    background-color: var(--mantis-900);
+    border-color: var(--mantis-800);
+
+    border-style: double;
+    border-width: 5px;
+}
+
+div[id^='Jugador'] {
+    border-radius: 10%;
+    margin: 10px;
+
+    background-color: var(--mantis-700);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.75);
+    border-width: 5px;
+}
+
+div[id^='Jugador'].Turno {
+    background-color: var(--mantis-500);
+}
+/*---- ==== END DISEÑO TABLERO ==== ----*/
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+p {
+    margin: 0;
+    color: white;
+}
+
