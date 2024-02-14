@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOVE ME</title>
+        <style>
+            * {
+                text-align: center;
+                transition: all 0.5s ease-in;
+            }
+
+            button {
+                color: white;
+                border: none;
+                font-size: 40px;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            #yes {
+                background-color: green;
+            }
+
+                #yes:hover {
+                    background-color: greenyellow;
+                }
+
+            #no {
+                background-color: red;
+            }
+
+                #no:hover {
+                    background-color: rgb(159, 0, 0);
+                }
+        </style>
+    </head>
+    <body>
+        <h1>DO YOU LOVE ME?</h1>
+        <button id="yes" onclick="YES()">YES</button>
+        <button id="no" onclick="NO()">NO</button>
+        <h1 id="mesage" style="display: none;">I LOVE U MORE :P</h1>
+
+        <script>
+            var btnYes = document.getElementById("yes");
+            var btnNo = document.getElementById("no");
+            var message = document.getElementById("mesage");
+
+            var sizeYES = 40;
+
+            function NO() {
+                sizeYES += 10;
+
+                btnYes.style.fontSize = sizeYES + "px";
+                message.style.display = "none";
+            }
+
+            function YES() {
+                message.style.display = "block";
+            }
+
+        </script>
+    </body>
+</html>
