@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>San Valentín 2025</title>
+    
+    <!-- Agregar Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Agregar jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Agregar Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+    <style>
+        :root {
+            --dark-color: #000000; /* Define the dark color variable */
+            --primary-color: #ff69b4; /* Define a primary color */
+            --secondary-color: #ff1493; /* Define a secondary color */
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: radial-gradient(
+                ellipse at top,
+                transparent 0%,
+                var(--dark-color)
+                ),
+                radial-gradient(
+                ellipse at bottom,
+                var(--dark-color),
+                rgba(145, 233, 255, 0.2)
+                ),
+                repeating-linear-gradient(
+                220deg,
+                rgb(0, 0, 0) 0px,
+                rgb(0, 0, 0) 19px,
+                transparent 19px,
+                transparent 22px
+                ),
+                repeating-linear-gradient(
+                189deg,
+                rgb(0, 0, 0) 0px,
+                rgb(0, 0, 0) 19px,
+                transparent 19px,
+                transparent 22px
+                ),
+                repeating-linear-gradient(
+                148deg,
+                rgb(0, 0, 0) 0px,
+                rgb(0, 0, 0) 19px,
+                transparent 19px,
+                transparent 22px
+                ),
+                linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>San Valentín 2025</h1>
+        <p>Jugamos un juego? Mi amor por ti es tan grande que está dividido en varias páginas. Deberás encontrarlo y redescubrirlo.</p>
+        <input type="text" placeholder="Escribe tu nombre" class="form-control" style="margin-bottom: 10px;">
+        <button class="btn-custom" onclick="startGame()">Comenzar</button>
+    </div>
+
+    <script>
+        function startGame() {
+            // Obtener el valor del input
+            const name = document.querySelector('input').value;
+
+            // Si es igual a aki redireccionar a la siguiente página
+            if (name.toLowerCase() === 'aki') {
+                window.location.href = './aki.html';
+            } else if (name.toLowerCase() === '04/06') {
+                window.location.href = './flores-amarillas-tres-main/flores-amarillas-tres-main/flower.html';
+            } else if (name.toLowerCase() == "150") {
+                window.location.href = './galeria.html';
+            } else {
+                alert('Vaya parece que has introducido un nombre incorrecto. Inténtalo de nuevo. ^_____^');
+            }
+        }
+    </script>
+</body>
+</html>

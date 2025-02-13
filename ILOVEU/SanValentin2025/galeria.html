@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #a61e4d;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+        }
+        .photo {
+            position: relative;
+            width: 150px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transform: rotate(var(--rotate, 0deg));
+            transition: transform 0.3s;
+            border: 3px solid #d63384;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo::before {
+            content: '\2665';
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            font-size: 24px;
+            color: #d63384;
+            transform: translateX(-50%);
+        }
+        .photo:hover {
+            transform: scale(1.1);
+        }
+        .heart {
+            position: absolute;
+            font-size: calc(15px + 10 * random());
+            top: -10px;
+            animation: fall linear infinite;
+            transform: rotate(calc(-30deg + 60 * random()));
+        }
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(var(--rotation, 0deg)); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(var(--rotation, 360deg)); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Eres mi persona favorita 💖</h1>
+    <p>Feliz San Valentín, con mucho amor para ti! 💕</p>
+    <div class="gallery">
+        <div class="photo" style="--rotate: -5deg;"><img src="./fotos/a.jpg" alt="Foto 1"></div>
+        <div class="photo" style="--rotate: 3deg;"><img src="./fotos/b.jpg" alt="Foto 2"></div>
+        <div class="photo" style="--rotate: -2deg;"><img src="./fotos/c.jpg" alt="Foto 3"></div>
+        <div class="photo" style="--rotate: 4deg;"><img src="./fotos/d.jpg" alt="Foto 4"></div>
+        <div class="photo" style="--rotate: -6deg;"><img src="./fotos/e.jpg" alt="Foto 5"></div>
+        <div class="photo" style="--rotate: 7deg;"><img src="./fotos/f.jpg" alt="Foto 6"></div>
+        <div class="photo" style="--rotate: -3deg;"><img src="./fotos/g.jpg" alt="Foto 7"></div>
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = Math.random() > 0.5 ? '💙' : '🧡';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            heart.style.transform = `rotate(${Math.random() * 360}deg)`;
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
